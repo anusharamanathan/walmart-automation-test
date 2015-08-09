@@ -1,0 +1,28 @@
+Requires : 
+-- ChromeDriver executable to be on the system path (e.g /usr/bin on Linux/Mac). On windows , it is expected to be present at D:/chrome_driver/bin/chromedriver.exe (DEFAULT).
+   If not , the source code can be modified to point to the path where it is present.
+-- maven3 and java7 or java8 to be setup correctly on the target machine.
+-- Google Chrome on the machine.
+-- Eclipse (or any other Java IDE)
+
+Assumptions : 
+-- A wait of 15-30 seconds is programatically implemented to simulate a real user (and sometimes for the page to finish loading on slower connections)
+-- Where possible CSS selectors are used to select items ; this is known to be browser-independent.
+-- XPath selectors are used when CSS selectors are not unique ; this might depend on the browser implementation of XPath.
+
+Running : 
+-- Import the project into Eclipse on a machine that has java and maven3 setup correctly. Then it can be run on the IDE.
+-- Alternatively typing "mvn clean install" from the directory that contains pom.xml will build a runnable jar file
+
+Additional : 
+-- The file default_search_terms.txt in the source tree contains the required search terms.More search terms may be added.
+-- Username and password are configurable in the source.
+-- A JUnit Test is also present.
+
+KNOWN ISSUES : 
+-- https://code.google.com/p/selenium/issues/detail?id=2766 ; sometimes (ONLY on chrome) an element not clickable manifests itself. Google has marked it as a WON'T FIX. 
+   In this case , we need to re-execute the program.
+-- when a page does not load for 30 seconds (a very reasonable interval) , the program will shut down.
+
+Future Improvements : 
+-- Integrate with Apache CLI , so that the browser and search terms can be passed in at runtime
