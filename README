@@ -17,7 +17,7 @@ Running :
 Additional : 
 -- The file default_search_terms.txt in the source tree contains the required search terms.More search terms may be added.
 -- Username and password are configurable in the source.
-
+-- A JUnit Test is also present.
 
 KNOWN ISSUES : 
 -- https://code.google.com/p/selenium/issues/detail?id=2766 ; sometimes (ONLY on chrome) an element not clickable manifests itself. Google has marked it as a WON'T FIX. 
