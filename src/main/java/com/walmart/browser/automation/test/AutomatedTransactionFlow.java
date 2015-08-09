@@ -245,6 +245,8 @@ public class AutomatedTransactionFlow {
 							.id(ADD_TO_CART_BUTTON_ID)));
 			WebElement ItemBox = webDriver.findElement(By
 					.xpath(ADD_ITEM_TO_CART_ITEM_ID_XPATH));
+		
+			// this is the item that is added to the cart. verifyItemInCart(itemAddedToCart) verifies that the item added here is the item present in the cart
 			selectedItemID = ItemBox.getAttribute(ITEM_ID_KEY);
 
 			addToCartButton.sendKeys(Keys.ENTER);
@@ -284,6 +286,10 @@ public class AutomatedTransactionFlow {
 		signInButton.click();
 	}
 
+	/**
+	 * verify that the item added previously is the one(and only item) present in the cart
+	 * @param itemAddedToCart
+	 */
 	private void verifyItemInCart(String itemAddedToCart) {
 		webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		WebElement shippingElement = (new WebDriverWait(webDriver,
