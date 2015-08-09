@@ -4,9 +4,9 @@ Flow:
 3)The address http://mobile.walmart.com is typed into the address bar.
 4)After the site has finished loading , a randomly selected search term from the file default_search_terms.txt is entered into the search bar.
 5)Once the results are loaded , a random item is chosen from the list and added to the cart ONLY if it is available. 
-	i)If an OUT OF STOCK item is present,the program iterates to an available item and adds it to the cart.
-   ii)If the queried item is an iPhone , the zip code is programmatically entered to verify if service is available in the area.
-  iii)If the queried term is also a department , the program disambiguates correctly and selects the product instead of the department.
+    i)If an OUT OF STOCK item is present,the program iterates to an available item and adds it to the cart.
+   ii)If the queried item needs a zip code(e.g iPhone) , the zip code is programmatically entered to verify if service is available in the area.
+  iii)If the queried term is also a department (e.g toys) , the program disambiguates correctly and selects the product instead of the department.
 6)The checkout process is initiated ; the required email and password for the account are filled in.
 7)The program verifies that the item added in step 5 is the only item present in the cart
 
